@@ -1,3 +1,23 @@
+Hacky OneLoader fork that:
+- adds support for the official macOS port of OMORI, which does not use the /www subfolder
+- brings back support for nwjs 0.77.0 (required by the Apple Silicon compatibility patch) which was present in 1.2.1
+- tells the user to restart the game if that's required to apply changes to package.json
+
+To install on a Mac:
+1. If you are on a Apple Silicon machine: Apply [this compatibility patch](https://github.com/SnowpMakes/omori-apple-silicon/blob/master/patch.md)
+2. Download [77Loader](https://github.com/nift4/77Loader/archive/refs/heads/master.zip) and extract the ZIP file
+3. In your Steam library, right-click OMORI and open local game files
+4. Right-click the file `OMORI.app` and press "View package contents"
+5. Enter `Contents`, then `Resources`, then `app.nw` folders
+6. In another Finder window, open the `www` folder you extracted from the ZIP file earlier, copy all files inside it (NOT the folder itself) and paste it into the `app.nw` folder, then replace files when asked
+7. Have fun!
+
+If you want to install this on a Windows machine for the restart notification feature or just for easier modpack distribution, this is working just fine - you can install exactly like you would install OneLoader.
+
+Please note that I have only tested this on an Apple Silicon and a Windows machine, but feel free to hit me up if there are any issues with Intel Macs or if you need help in general.
+
+Original README below:
+
 # OneLoader
 High performance mod loader for OMORI
 
